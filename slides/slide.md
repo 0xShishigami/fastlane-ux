@@ -12,112 +12,190 @@ style: |
   }
 ---
 
-# Fastlane UX
-## A Proposal to Strengthen Our Development Process
+# ⚡️ Fastlane UX
+## A bridge between code and design
+# 🧑‍💻🤝👨‍🎨
 
-**Objective:** To propose a lightweight process designed to increase development velocity, reduce rework, and enhance the quality of our products.
+by Shishi 🦌
+
+<style scoped>
+  h1 {
+    font-size: 3rem;
+  } 
+</style>
 
 <!-- An example note -->
 
 ---
 
-# The Challenge
+# Product workflow
 
-Our team consistently ships excellent work, but as we've scaled, we've encountered natural growing pains common in fast-moving companies.
+## Conventional path
 
-## Key Areas for Improvement
+```mermaid
+flowchart LR
+  A[Idea] --> B[Design] --> C[Development]
+```
 
-- **🚫 Reducing Rework:** Catching misalignments *before* code is written
-- **⚠️ Ensuring Product Quality:** Preventing critical usability issues from reaching late stages  
-- **🧩 Creating Predictable Flow:** Giving the development team the clarity they need to build with fewer blockers
+## Tech-first path
+
+```mermaid
+flowchart LR
+  a[Idea] --> B[Development] --> C[Design] --> D[Development]
+```
 
 ---
 
-# Recent Case Studies
+# The Challenge
 
-## Case Study 1: Privacy Pools
-**The Problem:** Development started without a clear interface to build, leading to partner-requested redesigns *after* code implementation.
+## Key Areas for Improvement
 
-**Impact:** Significant rework and delays that could be avoided with a clearer starting point.
+- 🚫 Reducing Rework
+- ⚠️ Ensuring Product Quality
+- 🧩 Creating Predictable Flow
 
-## Case Study 2: EF Wallet  
-**The Problem:** Late UX review identified critical issues:
-- Users' private funds were obscured behind a switch
-- "Send" flow truncated wallet addresses, creating risk of irreversible fund loss
-
-**Impact:** Last-minute fixes required. A proactive check could have prevented these issues.
+<!--
+- Reducing Rework: Catching misalignments *before* code is written
+- Ensuring Product Quality: Preventing critical usability issues from reaching late stages
+- Creating Predictable Flow: Giving the development team the clarity they need to build with fewer blockers
+-->
 
 ---
 
 # Introducing Fastlane UX
+Build right, faster, and eliminate rework.
+<br>
+| What It Is            | What It Is NOT    |
+|-----------------------|------------------|
+| 👍 Short, async step     | 👎 Bureaucracy      |
+| 👍 Source of truth       | 👎 Meetings         |
 
-A proposal to **build right, faster, and eliminate rework** by introducing a simple clarity step.
+<!--
+A proposal to build right, faster, and eliminate rework by introducing a simple clarity step.
 
-## What It Is
+What It Is:
 - A short, async, pre-development step to ensure everyone is aligned
 - Focuses on creating a single "source of truth" for user flows
 
-## What It Is NOT
+What It Is NOT:
 - A new layer of bureaucracy
 - More meetings
 - A design-heavy process
+-->
 
 ---
 
 # How Fastlane UX Works
 
-| Step | What Happens | Owned By |
-|------|-------------|----------|
-| **1. User Flow Sketch** | Quick flow diagram with edge cases is drafted. UI Wireframes can also be helpful. | Product Engineer |
-| **2. Async Review** | Devs & stakeholders iterate the flow / UI. | Project Team |
-| **3. Document the Product** | Include the revised flow and UI to the Tech Design. | Team Leader |
-| **4. Greenlight to Code** | Dev scope is clear, with no blockers. | Team Leader |
-
----
-
-# The Product Engineer Role
-
-A facilitation role designed to support our engineers. It's a hybrid function that drives product clarity and UX quality **before** engineering begins.
-
-## Core Responsibilities
-
-- Facilitate the **Fastlane UX** process
-- Translate ideas into clear **user flows and edge cases**
-- Create the **"source of truth"** that aligns design, dev, and partners
-- Serve as a resource for developers, providing instant clarity on user flows
+```mermaid
+graph LR
+    A((User Flow Sketch)) e1@==> B((Async Review)) e2@==> A
+    e1@{ animation: fast }
+    e2@{ animation: fast }
+    B -- Document it --> C((Idea draft))
+```
+ 1. Create **user flow diagram** + **UI wireframes**. 
+ 2. Iterate with feedback.
+ 3. Include it in the Idea Draft / Tech Design.
 
 ---
 
 # Why This Matters
 
-This small change has a big impact on the things our business cares about most.
+  - 🚫 Catches UX/flow issues early 
+  - 🐛 Prevent critical bugs 
+  - 🧭 One clear "source of truth" 
+  - 🚀 Shipping Velocity 
+  - 🤝 Partner Trust 
 
-| Concern | How Fastlane UX Helps |
-|---------|----------------------|
-| **🚫 Rework Costs** | Catches all UX/flow issues before development starts |
-| **⚠️ Product Risk** | Prevents critical bugs |
-| **🧩 Coordination Overhead** | Creates one clear "source of truth" to eliminate confusion |
-| **🚀 Shipping Velocity** | Reduces dev questions, blockers, and back-and-forth |
-| **🤝 Partner Trust** | Improves the polish and consistency of everything we ship |
+<!--
+- Reduces questions, blockers, and back-and-forth
+-->
+---
+
+# User Flow Standard
+
+We all speak the same language.
+
+- 🧐 Clarity & Consistency
+- ⚡️ Efficiency
+- 🗣️ Communication
+
+<!--
+- Single, shared language for diagrams, eliminates ambiguity in communication
+- Accelerates creation process
+- Ensures accurate reflection of user experience
+-->
+
+<style scoped>
+  .kroki-image-container {
+    background: transparent;
+  }
+</style>
 
 ---
 
-# User Flow Standards
 
-## Why We Need Standards
+<div class="container">
+<div>
 
-- **Clarity & Consistency:** Single, shared language for diagrams eliminates ambiguity
-- **Efficiency:** Standardized tools and templates accelerate creation process
-- **Quality:** User-centric focus ensures accurate reflection of user experience
+# The tools
+- 💻 Mermaid
+- 🎨 FigJam
+- ✏️ Excalidraw
+</div>
+
+![Tools](./img/tools.png)
+</div>
+
+<style scoped>
+  .container {
+    width: 100%;
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  img:not(.emoji) {
+    transform: scale(1.25) translate(-20%, 0%);
+    background: transparent;
+  }
+</style>
 
 ---
 
 # Mermaid: Our Source of Truth
+<div class="container">
+<div>
 
-Mermaid is a text-based tool for generating diagrams and charts. We use it because it is:
+A text-based tool for generating diagrams and charts.
 
-- **Easy to Edit:** Quickly modify flows by changing text, not manually realigning shapes
-- **Integration-Friendly:** Can be embedded directly into documentation platforms
+- ✏️ Easy to Edit
+- 🔗 Integration-Friendly
+- 🤖 Boosted by LLMs
+<br>
+
+[🔗 Mermaid docs](https://mermaid.js.org/intro/)
+[🔗 Mermaid playground](https://mermaid.live/)
+</div>
+
+![Mermaid live](./img/mermaid-live.png)
+</div>
+<!--
+- Quickly modify flows by changing text, no need to manually realign shapes
+- Can be embedded directly into documentation
+-->
+
+<style scoped>
+  .container {
+    width: 100%;
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  img:not(.emoji) {
+    transform: scale(1.25) translate(-10%, 10%);
+  }
+</style>
 
 ---
 
@@ -132,46 +210,156 @@ Mermaid is a text-based tool for generating diagrams and charts. We use it becau
 | `{…}` | Decision | Condition or branching logic | Diamond |
 | `(((…)))` | Error | Error state or user-facing error message | Double circle |
 
+<style scoped>
+  table {
+    transform: scale(0.8) translateY(-10%);
+  }
+</style>
+
 ---
 
-# Mermaid Flowchart Example
+# Mermaid Shapes
+
+<div class="container">
+
 ```
-flowchart TD
+    A[/ UI Trigger /]
+    B[\ UI Prompt \]
+    C[ System output ]
+    D[[ Processing ]]
+    E{ Decision }
+    F((( Error )))
+```
+
+<div class="shapes">
+
+```mermaid
+flowchart LR
     A[/UI Trigger/]
     B[\UI Prompt\]
     C[System output]
+```
+```mermaid
+flowchart LR
     D[[Processing]]
     E{Decision}
     F(((Error)))
 ```
+</div>
+</div>
+
 <style scoped>
+  .container {
+    width: 100%;
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shapes{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transform: translateY(-20%);
+  }
+
+  marp-pre {
+    height: fit-content;
+  }
+
   .kroki-image-container {
     background: transparent;
   }
 </style>
+
+---
+
+# Example flow
+
+<div class="container">
+
+```
+flowchart TD
+    A[Displays login form]
+    B[/Enter credentials and click 'Submit'/]
+    C[\Request agreement of T&C\]
+    D[[Validate credentials]]
+    E{Is valid?}
+    F['Welcome!' message]
+    G((('Invalid credentials')))
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E -- Yes --> F
+    E -- No --> G
+    G --> A
+```
+
 ```mermaid
 flowchart TD
-    A[/UI Trigger/]
-    B[\UI Prompt\]
-    C[System output]
-    D[[Processing]]
-    E{Decision}
-    F(((Error)))
+    A[Displays login form]
+    B[/Enter credentials and click 'Submit'/]
+    C[\Request agreement of T&C\]
+    D[[Validate credentials]]
+    E{Is valid?}
+    F['Welcome!' message]
+    G((('Invalid credentials')))
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E -- Yes --> F
+    E -- No --> G
+    G --> A
 ```
+</div>
+
+<style scoped>
+  .container {
+    width: 100%;
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  marp-pre {
+    height: fit-content;
+  }
+
+  .kroki-image-container {
+    transform: scale(0.7) translateY(-40%);
+  }
+</style>
 
 ---
 
 # FigJam: Our Collaboration Space
+An online collaborative whiteboard.
 
-While Mermaid is our source of truth, FigJam is our space for ideation, collaboration, and presentation.
+<div class="container">
 
-## When to Use FigJam
+- 🎨 Visual and simple tool
+- 🤝 Real-time collaboration
+- 🧑‍🤝‍🧑 Good for non-tech people
 
-- Brainstorming initial flow ideas
-- Collaborating in real-time with PMs, engineers, and stakeholders
-- Presenting a flow during design reviews
+![FigJam](./img/figjam.png)
 
-**Template:** [User Flow Standard FigJam Board](https://www.figma.com/board/ZOdKsuqIg9Oo4ISCFtTpSG/User-flow-standard?node-id=0-1&t=ADjb9pLhMhNKEVKE-1)
+</div>
+
+[🔗 User Flow Standard FigJam Board](https://www.figma.com/board/ZOdKsuqIg9Oo4ISCFtTpSG/User-flow-standard?node-id=0-1&t=ADjb9pLhMhNKEVKE-1)
+
+
+<style scoped>
+  .container {
+    width: 100%;
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+</style>
 
 ---
 
@@ -179,22 +367,24 @@ While Mermaid is our source of truth, FigJam is our space for ideation, collabor
 
 ## Sequence Diagram to Flowchart Conversion
 
-We use AI to translate technical `sequenceDiagram` into user-centric `flowchart`, especially useful when working from engineering specs.
+We can use AI to translate technical `sequenceDiagram` into user-centric `flowchart`.
 
 ### The Process
-1. Start with technical sequence diagram
-2. Use AI prompt to convert to user-centered flowchart
-3. Follow our visual intent standards
-4. Focus on user perspective, not backend APIs
+1. Sequence diagram as input
+2. Ask the LLM for helping
+3. Polishing, make it simpler
+
+[🔗 Prompt](https://www.notion.so/defi-wonderland/Prompt-sequenceDiagram-to-flowchart-2379a4c092c78048a47ffd575a890131)
+
+<!--
+- Especially useful when working from engineering specs
+- Focus on user perspective, not backend APIs
+-->
 
 ---
 
-# User Flow Example: Stealth Transaction
-<style scoped>
-.kroki-image-container {
-    transform: scale(0.75);
-  }
-</style>
+# User Flow Example: Private Senders flow
+
 ```mermaid
 sequenceDiagram
 actor a as Alice
@@ -211,15 +401,15 @@ rpc-->>acc2: now this address has 1 ETH
 aw->>rpc: Publish the ephemereal pubkey in the registry
 aw->>a: display the success modal
 ```
+<style scoped>
+.kroki-image-container {
+    transform: scale(0.75) translateY(-10%);
+  }
+</style>
 
 ---
 
 # User Flow Example: Output (Flowchart)
-<style scoped>
-.kroki-image-container {
-    transform: scale(0.7) translateY(-15%);
-  }
-</style>
 ```mermaid
 flowchart TD
     A[/Enters recipient address and send amount *1/] --> B
@@ -228,10 +418,18 @@ flowchart TD
     C -->|No| E(((Transaction Failed)))
 ```
 
+<!--
 ## Supplementary Notes
 - **1. Send Details:** User provides recipient's public address and ETH amount
 - **2. Stealth Processing:** Wallet checks stealth meta-key, generates stealth address, sends ETH, publishes ephemeral key
 - **3. Privacy Benefit:** Observer cannot link transaction to recipient's main address
+-->
+
+<style scoped>
+.kroki-image-container {
+  transform: scale(0.7) translate(25%, -15%);
+}
+</style>
 
 ---
 
@@ -239,172 +437,257 @@ flowchart TD
 
 ## The Three Core Ideas
 
-1. **It's a Rough, Functional Sketch** - Not polished design, but functional outline
-2. **Use the Simplest Shapes Possible** - Keeps process fast and focused on structure
-3. **Give Each Screen One Core Goal** - Each screen has one primary purpose
+<div class="container">
+
+- 📝 Functional sketch
+- 🔲 Simplest shapes
+- 🎯 One goal for each screen
+
+![Excalidraw](./img/excalidraw-simple.png)
+
+</div>
+
+<style scoped>
+  .container {
+    width: 100%;
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  img:not(.emoji) {
+    transform: scale(1.25) translate(-10%, -10%);
+  }
+</style>
+
+<!--
+- Functional outline, not visual design
+- Focused on structure, not aesthetics
+- One primary purpose per screen
+-->
 
 ---
 
-# How to Sketch Wireframes
+# Wireframes (1/3): Define the Screen's Purpose
+What is the main goal? Display, collect, process?
 
-## Step 1: Define the Screen's Purpose
-Ask: What is the main goal? What inputs does it need? What information will it display?
+![Define](./img/excalidraw-define.png)
 
-## Step 2: Draw the Mobile-First Layout
-Sketch on small canvas as if designing for phone. Use simple, labeled rectangles.
+<style scoped>
+  img {
+    transform: scale(0.7) translate(0, -20%);
+  }
+</style>
 
-## Step 3: Connect Your Screens
-Show complete user journey with arrows between screen boxes.
+---
+
+# Wireframes (2/3): Draw content Mobile-First
+
+Simple shapes, use shades of gray. Mobile forces to keep it simple.
+
+![Define](./img/excalidraw-draw.png)
+
+<style scoped>
+  img {
+    transform: scale(0.7) translate(0, -20%);
+  }
+</style>
+
+---
+
+# Wireframes (3/3): Connect Your Screens
+
+Simple shapes, use shades of gray. Mobile forces to keep it simple.
+
+![Connect](./img/excalidraw-connect.png)
+
+<style scoped>
+  img {
+    transform: scale(0.7) translate(0, -20%);
+  }
+</style>
 
 ---
 
 # Wireframing Best Practices
 
-## ✅ Do This
-- **Keep it simple:** Avoid any visual design
-- **Annotate Smartly:** Only add notes necessary for understanding function
-- **Collaborate:** Share sketches early for quick feedback
+<div class="container">
 
-## ❌ Avoid This
+<div>
+
+## 👍 Do This
+- Keep it simple
+- Annotate Smartly
+- Collaborate
+</div>
+<div>
+
+## 👎 Avoid This
+- Design details
+- Over-explaining
+- Visual perfection
+</div>
+</div>
+
+<style scoped>
+  .container {
+    width: 100%;
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+</style>
+
+<!--
+Do This:
+- Keep it simple: Avoid any visual design
+- Annotate Smartly: Only add notes necessary for understanding
+- Collaborate: Share sketches early for quick feedback
+
+Avoid This:
 - Design details like colors or specific fonts
 - Over-explaining obvious elements
 - Getting caught up in visual perfection
-
+-->
 ---
 
 # Excalidraw: Our Wireframing Tool
 
+<div class="container">
+<div>
+
 ## Why Excalidraw?
 
-- **Sketch-like Feel:** Reinforces "low-fidelity" and "not a design" aspect
-- **Speed & Simplicity:** Intuitive interface, quick drawing
-- **Free & Accessible:** Browser-based, no complex setup
-- **Easy Sharing:** Export as images or share live canvas links
-- **No Design Temptations:** Keeps focus on essential layout and function
+- ✏️ Sketch-like Feel
+- ⚡ Speed & Simplicity
+- 🆓 Free & Accessible
+- 🔗 Easy Sharing
+- 🚫 No Design Temptations
+<br>
 
-**Tool:** [excalidraw.com](https://excalidraw.com/)
+[🔗 excalidraw.com](https://excalidraw.com/)
+</div>
+
+![Excalidraw](./img/excalidraw.png)
+</div>
+
+<style scoped>
+  .container {
+    width: 100%;
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  img:not(.emoji) {
+    transform: scale(1.4) translate(-10%, 20%);
+  }
+</style>
+
+<!--
+- Sketch-like Feel: Reinforces "low-fidelity" aspect
+- Speed & Simplicity: Intuitive interface, quick drawing
+- Free & Accessible: Browser-based, no complex setup
+- Easy Sharing: Export as images or share live canvas links
+- No Design Temptations: Keeps focus on essential layout
+- Reinforces "not a design" aspect
+- Keeps focus on essential layout and function
+-->
 
 ---
 
 # Excalidraw Cheatsheet
 
-## Essential Drawing Tools
-- **Select Tool:** `V` or `1`
-- **Rectangle:** `R` or `2` (screens, buttons, input fields)
-- **Circle/Ellipse:** `O` or `4` (icons, avatars)
-- **Arrow:** `A` or `5` (flow, navigation)
-- **Line:** `L` or `6` (dividers, text placeholders)
-- **Text:** `T` or `8` (labels, annotations)
+<div class="container">
+<div>
 
-## Power User Tips
-- **Constrain Proportions:** Hold `Shift` while drawing
-- **Draw from Center:** Hold `Alt/Option` while drawing
-- **Duplicate:** `Ctrl/Cmd + D` or `Alt/Option + Drag`
-- **Group/Ungroup:** `Ctrl/Cmd + G` / `Ctrl/Cmd + Shift + G`
+- Select Tool: `V` or `1`
+- Rectangle: `R` or `2`
+- Circle/Ellipse: `O` or `4`
+- Arrow: `A` or `5`
+- Line: `L` or `6`
+- Text: `T` or `8`
+
+<br>
+
+[🔗 Excalidraw Cheatsheet](https://www.notion.so/defi-wonderland/Excalidraw-Cheatsheet-for-Wireframing-2339a4c092c7800294e9edbd0914188d)
+
+</div>
+
+<div>
+
+![Toolbar](./img/excalidraw-toolbar.png)
+![Advanced](./img/excalidraw-advanced.png)
+</div>
+</div>
+
+<!--
+This slide is already concise and practical - keeping all shortcuts visible for reference during wireframing sessions.
+-->
+
+<style scoped>
+  .container {
+    width: 100%;
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  img:not(.emoji) {
+    transform: scale(1) translate(-20%, 0);
+  }
+</style>
 
 ---
 
 # Mermaid to Figma Plugins
 
-## Recommended Plugins
+<div class="container">
+<div>
 
-### 1. Mermaid-in-Figma (Static Images)
-- Quick generation of non-editable images
-- Ideal for presentations or documentation
+Not fully compatible yet 😞
+but can help a little bit.
+<br>
 
-### 2. Mermaid-to-FigJam / Mermaid-to-Flow (Editable)
-- Convert Mermaid code into native, editable FigJam shapes
-- Preferred method for bringing "source of truth" into FigJam
+[🔗 Plugins](https://www.notion.so/defi-wonderland/User-flow-standard-2339a4c092c780d785a4cae477aab8d5#2339a4c092c78039a4e9c32e0c25c024)
+</div>
 
+![Plugins](./img/figjam-plugin.png)
+<br>
+<br>
+<br>
+<br>
+</div>
+
+<!--
 > ⚠️ **Note:** These plugins are experimental and far from perfect, but they can speed up the process.
+-->
+
+<style scoped>
+  .container {
+    width: 100%;
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  img:not(.emoji) {
+    transform: scale(1.5) translate(-20%, 20%);
+  }
+</style>
 
 ---
 
-# Implementation Roadmap
-
-## Phase 1: Foundation
-- Establish User Flow Standards
-- Set up Mermaid templates
-- Create FigJam collaboration boards
-
-## Phase 2: Process Integration
-- Train team on Fastlane UX process
-- Implement Product Engineer role
-- Create documentation and examples
-
-## Phase 3: Optimization
-- Gather feedback and iterate
-- Refine AI-assisted workflows
-- Expand tool integrations
-
----
-
-# Success Metrics
-
-## What We'll Measure
-
-- **Reduced Rework:** Fewer post-development changes
-- **Faster Development:** Clearer requirements lead to fewer blockers
-- **Higher Quality:** Fewer critical UX issues reaching production
-- **Team Satisfaction:** Better alignment and reduced frustration
-
-## Expected Outcomes
-
-- 50% reduction in post-development redesign requests
-- 30% faster development cycles
-- 90% stakeholder alignment before coding begins
-
----
-
-# Next Steps
-
-## Immediate Actions
-
-1. **Review and Approve** this proposal with leadership
-2. **Assign Product Engineer** role to team member
-3. **Set up Tools** (Mermaid, FigJam, Excalidraw)
-4. **Pilot Process** on next feature development
-
-## Long-term Vision
-
-- Integrate Fastlane UX into all development workflows
-- Build comprehensive documentation and training materials
-- Establish metrics and feedback loops for continuous improvement
-
----
-
-# Questions & Discussion
-
-## Key Questions to Address
-
-- Who will take on the Product Engineer role?
-- How will we measure success?
-- What tools and resources do we need?
-- How do we integrate this with existing processes?
-
-## Next Meeting
-
-- Review feedback and concerns
-- Finalize implementation plan
-- Set timeline and milestones
-
----
-
-# Thank You
-
-## Fastlane UX: Building Right, Faster
+# Thank You 🦌💜
 
 **Questions? Comments? Concerns?**
 
-Let's discuss how we can implement this lightweight process to strengthen our development workflow and deliver even better products.
 
 ---
 
 <!-- _class: lead -->
 # Appendix
 
-## Additional Resources
+## 🔗 Additional Resources
 
-- [User Flow Standard Documentation](docs/Fastlane%20UX%20A%20Proposal%20to%20Strengthen%20Our%20Developme%202169a4c092c7803da0d5e258ba13efef/User%20flow%20standard%202339a4c092c780d785a4cae477aab8d5.md)
-- [Wireframing Guide](docs/Fastlane%20UX%20A%20Proposal%20to%20Strengthen%20Our%20Developme%202169a4c092c7803da0d5e258ba13efef/Wireframing%20for%20Non-designers%202339a4c092c78029a83cd072ac73d413.md)
-- [Excalidraw Cheatsheet](docs/Fastlane%20UX%20A%20Proposal%20to%20Strengthen%20Our%20Developme%202169a4c092c7803da0d5e258ba13efef/Wireframing%20for%20Non-designers%202339a4c092c78029a83cd072ac73d413/%F0%9F%8E%A8%20Excalidraw%20Cheatsheet%20for%20Wireframing%202339a4c092c7800294e9edbd0914188d.md)
+- [⚡️ Fastlane UX](https://www.notion.so/defi-wonderland/Fastlane-UX-A-bridge-between-code-and-design-2169a4c092c7803da0d5e258ba13efef)
+- [🪨 User flow standard](https://www.notion.so/defi-wonderland/User-flow-standard-2339a4c092c780d785a4cae477aab8d5)
+- [😎 Wireframing for Non-designers](https://www.notion.so/defi-wonderland/Wireframing-for-Non-designers-2339a4c092c78029a83cd072ac73d413)
+- [🎨 Excalidraw Cheatsheet](https://www.notion.so/defi-wonderland/Excalidraw-Cheatsheet-for-Wireframing-2339a4c092c7800294e9edbd0914188d)
+- [📦 User flow AI generated example](https://www.notion.so/defi-wonderland/User-flow-AI-generated-example-2339a4c092c780f195e4cb248f465a7b)
