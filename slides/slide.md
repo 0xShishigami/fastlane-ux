@@ -89,11 +89,13 @@ What It Is NOT:
 
 ```mermaid
 graph LR
-    A((User Flow Sketch)) e1@==> B((Async Review)) e2@==> A
+    A((User Stories)) ==> B((User Flow Sketch + Wireframes))
+    B e1@==> C((Async Review)) e2@==> B
     e1@{ animation: fast }
     e2@{ animation: fast }
-    B -- Document it --> C((Idea draft))
+    C -- Document it --> D((Idea draft))
 ```
+ 1. Understand and refine user stories.
  1. Create **user flow diagram** + **UI wireframes**. 
  2. Iterate with feedback.
  3. Include it in the Idea Draft / Tech Design.
@@ -140,9 +142,12 @@ We all speak the same language.
 <div>
 
 # The tools
-- 💻 Mermaid
-- 🎨 FigJam
-- ✏️ Excalidraw
+- 📖 **User Stories**
+  describe what users need
+- 🔄 **User Flow**
+  step-by-step journey
+- 🖼️ **Wireframes**
+  visual layout/mockups
 </div>
 
 ![Tools](./img/tools.png)
@@ -158,6 +163,90 @@ We all speak the same language.
   img:not(.emoji) {
     transform: scale(1.25) translate(-20%, 0%);
     background: transparent;
+  }
+</style>
+
+---
+
+# User Stories: User Needs
+<div class="container">
+<div>
+
+User-focused descriptions of the sysmtem's features.
+
+- 👤 **As a [user type]**
+  Who needs this?
+- 🎯 **I want to [action]**
+  What do they want to do?
+- 💡 **So that [benefit]**
+  Why do they need it?
+</div>
+
+```
+👤 As a developer,
+🎯 I want to quickly sketch user flows
+💡 so I know what to do before coding.
+```
+</div>
+<!--
+- Quickly modify flows by changing text, no need to manually realign shapes
+- Can be embedded directly into documentation
+-->
+
+<style scoped>
+  .container {
+    width: 100%;
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  marp-pre {
+    padding: 2rem;
+    height: max-content;
+    line-height: 2;
+    transform: scale(1.25) translate(-10%, 10%);
+  }
+</style>
+
+---
+
+# User Flows
+<div class="container">
+<div>
+
+Diagrams that show how users move through your system to complete tasks.
+
+- 🗺️ Map the journey
+- 🔄 Identify paths
+- 🎯 Focus on goals
+- 🚫 Spot blockers
+</div>
+
+```mermaid
+flowchart TD
+    A[User arrives] --> B[Enter credentials]
+    B --> C{Valid?}
+    C -->|Yes| D[Dashboard]
+    C -->|No| E[Error message]
+    E --> B
+```
+</div>
+<!--
+- Show step-by-step user actions
+- Include success, error, and alternative flows
+- What does the user want to achieve?
+- Where might users get stuck?
+-->
+
+<style scoped>
+  .container {
+    width: 100%;
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .kroki-image-container {
+    transform: scale(1) translate(-10%, -20%);
   }
 </style>
 
@@ -336,33 +425,6 @@ flowchart TD
 
 ---
 
-# FigJam: Our Collaboration Space
-An online collaborative whiteboard.
-
-<div class="container">
-
-- 🎨 Visual and simple tool
-- 🤝 Real-time collaboration
-- 🧑‍🤝‍🧑 Good for non-tech people
-
-![FigJam](./img/figjam.png)
-
-</div>
-
-[🔗 User Flow Standard FigJam Board](https://www.figma.com/board/ZOdKsuqIg9Oo4ISCFtTpSG/User-flow-standard?node-id=0-1&t=ADjb9pLhMhNKEVKE-1)
-
-
-<style scoped>
-  .container {
-    width: 100%;
-    gap: 5rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-</style>
-
----
-
 # AI-Assisted Workflow
 
 ## Sequence Diagram to Flowchart Conversion
@@ -433,6 +495,33 @@ flowchart TD
 
 ---
 
+# FigJam: Collaboration Space
+An online collaborative whiteboard.
+
+<div class="container">
+
+- 🎨 Visual and simple tool
+- 🤝 Real-time collaboration
+- 🧑‍🤝‍🧑 Good for non-tech people
+
+![FigJam](./img/figjam.png)
+
+</div>
+
+[🔗 User Flow Standard FigJam Board](https://www.figma.com/board/ZOdKsuqIg9Oo4ISCFtTpSG/User-flow-standard?node-id=0-1&t=ADjb9pLhMhNKEVKE-1)
+
+
+<style scoped>
+  .container {
+    width: 100%;
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+</style>
+
+---
+
 # Wireframing for Non-designers
 
 ## The Three Core Ideas
@@ -496,7 +585,7 @@ Simple shapes, use shades of gray. Mobile forces to keep it simple.
 
 # Wireframes (3/3): Connect Your Screens
 
-Simple shapes, use shades of gray. Mobile forces to keep it simple.
+Make self explanatory flows. Use arrows if needed.
 
 ![Connect](./img/excalidraw-connect.png)
 
@@ -682,12 +771,10 @@ but can help a little bit.
 ---
 
 <!-- _class: lead -->
-# Appendix
+# 🔗 Additional Resources
 
-## 🔗 Additional Resources
-
-- [⚡️ Fastlane UX](https://www.notion.so/defi-wonderland/Fastlane-UX-A-bridge-between-code-and-design-2169a4c092c7803da0d5e258ba13efef)
-- [🪨 User flow standard](https://www.notion.so/defi-wonderland/User-flow-standard-2339a4c092c780d785a4cae477aab8d5)
-- [😎 Wireframing for Non-designers](https://www.notion.so/defi-wonderland/Wireframing-for-Non-designers-2339a4c092c78029a83cd072ac73d413)
-- [🎨 Excalidraw Cheatsheet](https://www.notion.so/defi-wonderland/Excalidraw-Cheatsheet-for-Wireframing-2339a4c092c7800294e9edbd0914188d)
-- [📦 User flow AI generated example](https://www.notion.so/defi-wonderland/User-flow-AI-generated-example-2339a4c092c780f195e4cb248f465a7b)
+[⚡️ Fastlane UX](https://www.notion.so/defi-wonderland/Fastlane-UX-A-bridge-between-code-and-design-2169a4c092c7803da0d5e258ba13efef)
+[🪨 User flow standard](https://www.notion.so/defi-wonderland/User-flow-standard-2339a4c092c780d785a4cae477aab8d5)
+[😎 Wireframing for Non-designers](https://www.notion.so/defi-wonderland/Wireframing-for-Non-designers-2339a4c092c78029a83cd072ac73d413)
+[🎨 Excalidraw Cheatsheet](https://www.notion.so/defi-wonderland/Excalidraw-Cheatsheet-for-Wireframing-2339a4c092c7800294e9edbd0914188d)
+[📦 User flow AI generated example](https://www.notion.so/defi-wonderland/User-flow-AI-generated-example-2339a4c092c780f195e4cb248f465a7b)
