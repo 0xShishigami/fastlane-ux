@@ -24,7 +24,11 @@ by Shishi 🦌
   } 
 </style>
 
-<!-- An example note -->
+<!-- 
+- A proccess
+- A tool's set
+- Knowledge
+-->
 
 ---
 
@@ -53,11 +57,13 @@ flowchart LR
 - 🚫 Reducing Rework
 - ⚠️ Ensuring Product Quality
 - 🧩 Creating Predictable Flow
+- 🗣️ Facilitate Communication
 
 <!--
-- Reducing Rework: Catching misalignments *before* code is written
-- Ensuring Product Quality: Preventing critical usability issues from reaching late stages
-- Creating Predictable Flow: Giving the development team the clarity they need to build with fewer blockers
+- Catching misalignments *before* code is written
+- Preventing critical usability issues from reaching late stages
+- Giving the development team the clarity they need to build with fewer blockers
+- Talk with the designer, give it context
 -->
 
 ---
@@ -111,32 +117,11 @@ graph LR
   - 🤝 Partner Trust 
 
 <!--
-- Reduces questions, blockers, and back-and-forth
+- Answer questions
+- Avoid blockers
+- Reduce back-and-forth
 -->
 ---
-
-# User Flow Standard
-
-We all speak the same language.
-
-- 🧐 Clarity & Consistency
-- ⚡️ Efficiency
-- 🗣️ Communication
-
-<!--
-- Single, shared language for diagrams, eliminates ambiguity in communication
-- Accelerates creation process
-- Ensures accurate reflection of user experience
--->
-
-<style scoped>
-  .kroki-image-container {
-    background: transparent;
-  }
-</style>
-
----
-
 
 <div class="container">
 <div>
@@ -188,9 +173,10 @@ User-focused descriptions of the sysmtem's features.
 💡 so I know what to do before coding.
 ```
 </div>
+
 <!--
-- Quickly modify flows by changing text, no need to manually realign shapes
-- Can be embedded directly into documentation
+- Any tool
+- Live in idea draft / tech design
 -->
 
 <style scoped>
@@ -218,8 +204,7 @@ Diagrams that show how users move through your system to complete tasks.
 
 - 🗺️ Map the journey
 - 🔄 Identify paths
-- 🎯 Focus on goals
-- 🚫 Spot blockers
+- 🚫 Find edge cases / errors
 </div>
 
 ```mermaid
@@ -726,7 +711,7 @@ This slide is already concise and practical - keeping all shortcuts visible for 
 
 ---
 
-# Mermaid to Figma Plugins
+# Bonus: Mermaid to Figma Plugins
 
 <div class="container">
 <div>
@@ -746,7 +731,7 @@ but can help a little bit.
 </div>
 
 <!--
-> ⚠️ **Note:** These plugins are experimental and far from perfect, but they can speed up the process.
+⚠️ These plugins are experimental and far from perfect, but they can speed up the process.
 -->
 
 <style scoped>
