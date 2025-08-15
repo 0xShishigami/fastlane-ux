@@ -11,7 +11,8 @@
     "build:pdf": "marp --pdf --output slides/slide.pdf slides/slide.md",
     "build:pptx": "marp --pptx --output slides/slide.pptx slides/slide.md",
     "build:all": "npm run build:html && npm run build:pdf && npm run build:pptx",
-    "preview": "marp slides/slide.md --server --watch"
+    "preview": "marp slides/slide.md --server --watch",
+    "publish": "marp --html --output index.html slides/slide.md --allow-local-files && sed -i '' 's|src=\"./img/|src=\"./slides/img/|g' index.html"
   },
   "keywords": [],
   "author": "",

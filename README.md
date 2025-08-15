@@ -24,7 +24,6 @@ Fastlane UX is a proposal to strengthen development workflows by introducing a s
 slides/
 ├── slides/           # Source Markdown files
 │   ├── slide.md     # Main Fastlane UX presentation
-│   ├── slide.html   # Generated HTML presentation
 │   ├── slide.pdf    # Generated PDF presentation
 │   ├── slide.pptx   # Generated PowerPoint presentation
 │   └── img/         # Presentation images
@@ -33,6 +32,7 @@ slides/
 │   ├── rose-pine-dawn.css
 │   └── rose-pine-moon.css
 ├── docs/            # Documentation and resources
+├── index.html       # Generated HTML presentation (GitHub Pages ready)
 ├── marp.config.js   # Marp configuration
 └── package.json     # Project dependencies
 ```
@@ -73,7 +73,7 @@ npm run preview
 marp -s -c marp.config.js
 
 # Generate HTML presentation
-marp --html --output slides/slide.html slides/slide.md
+marp --html --output index.html slides/slide.md
 
 # Generate PDF presentation
 marp --pdf --output slides/slide.pdf slides/slide.md
@@ -132,7 +132,7 @@ The project is configured via `marp.config.js`:
 - Kroki integration enabled for Mermaid diagrams
 - Custom Rose Pine theme set included
 
-**Note:** The configuration has been updated to process only the main presentation file (`slides/slide.md`) and output all generated files to the same `/slides` directory alongside the source file for easy access.
+**Note:** The configuration has been updated to process only the main presentation file (`slides/slide.md`). HTML files are generated as `index.html` in the root directory for GitHub Pages compatibility, while PDF and PPTX files are generated in the `/slides` directory.
 
 ## 📝 Writing Slides
 
