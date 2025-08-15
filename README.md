@@ -24,7 +24,9 @@ Fastlane UX is a proposal to strengthen development workflows by introducing a s
 slides/
 ├── slides/           # Source Markdown files
 │   ├── slide.md     # Main Fastlane UX presentation
-│   ├── slide.html   # Generated HTML output
+│   ├── slide.html   # Generated HTML presentation
+│   ├── slide.pdf    # Generated PDF presentation
+│   ├── slide.pptx   # Generated PowerPoint presentation
 │   └── img/         # Presentation images
 ├── themes/          # Custom CSS themes
 │   ├── rose-pine.css
@@ -44,29 +46,42 @@ pnpm install
 
 ## 📖 Usage
 
-### Live presentation server (recommended)
+### Using npm scripts (recommended)
 ```bash
+# Start live presentation server
+npm run dev
+
+# Generate HTML presentation
+npm run build:html
+
+# Generate PDF presentation
+npm run build:pdf
+
+# Generate PowerPoint presentation
+npm run build:pptx
+
+# Generate all formats at once
+npm run build:all
+
+# Live preview with auto-reload
+npm run preview
+```
+
+### Direct Marp commands
+```bash
+# Live presentation server (recommended)
 marp -s -c marp.config.js
-```
-This starts a local server with your custom configuration for live presentations.
 
-### Generate HTML presentation
-```bash
-marp slides/slide.md --output slides/slide.html
-```
+# Generate HTML presentation
+marp --html --output slides/slide.html slides/slide.md
 
-### Generate PDF presentation
-```bash
-marp slides/slide.md --pdf --output slides/presentation.pdf
-```
+# Generate PDF presentation
+marp --pdf --output slides/slide.pdf slides/slide.md
 
-### Generate PowerPoint presentation
-```bash
-marp slides/slide.md --pptx --output slides/presentation.pptx
-```
+# Generate PowerPoint presentation
+marp --pptx --output slides/slide.pptx slides/slide.md
 
-### Live preview with auto-reload
-```bash
+# Live preview with auto-reload
 marp slides/slide.md --server --watch
 ```
 
@@ -116,6 +131,8 @@ The project is configured via `marp.config.js`:
 - Local files allowed: `true`
 - Kroki integration enabled for Mermaid diagrams
 - Custom Rose Pine theme set included
+
+**Note:** The configuration has been updated to process only the main presentation file (`slides/slide.md`) and output all generated files to the same `/slides` directory alongside the source file for easy access.
 
 ## 📝 Writing Slides
 
